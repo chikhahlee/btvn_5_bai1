@@ -1,0 +1,92 @@
+* {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+.pic {
+  position: relative;
+  width: 480px;
+  height: 300px;
+  background-image: url(https://c.pxhere.com/images/a4/c1/407e451fa0617fdbf562eb9442ef-1636854.jpg!d);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pic::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(94, 80, 22), #ccc);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  filter: blur(2px);
+}
+
+.pic:hover::before {
+  bottom: 0px;
+  left: 0;
+  opacity: 30%;
+}
+.holy {
+  font-weight: 400;
+  transition: all 0.3s ease-in, opacity 0.5s linear;
+}
+.sadie {
+  font-weight: 700;
+  transition: all 0.3s ease-in, opacity 0.5s linear;
+}
+.holy:link {
+  color: #333;
+}
+.sadie:link {
+  color: #333;
+}
+.title {
+  color: #f9f7f7;
+  text-align: center;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  position: absolute;
+  transition: all 0.3s ease-in, opacity 0.5s linear;
+  color: #fff;
+}
+.pic:hover .holy {
+  color: #fff;
+  text-decoration: none;
+}
+.pic:hover .sadie {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pic:hover .title {
+  bottom: 60%;
+  opacity: 1;
+}
+.text {
+  text-align: center;
+  transition: all 1s ease-in-out;
+  color: #fff;
+}
+
+.text-container {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in, opacity 0.5s linear;
+  opacity: 0;
+}
+
+.pic:hover .text-container {
+  bottom: 30px;
+  opacity: 1;
+}
